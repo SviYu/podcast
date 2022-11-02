@@ -1,0 +1,15 @@
+@import 'base';
+
+body{
+    font-family: 'Montserrat Alternates', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}

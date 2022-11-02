@@ -1,0 +1,23 @@
+$colors: (
+    col-black: #000,
+    col-grey: #4d4d4d,
+    col-red: #cd4631,
+    col-blue: #81adc8,
+    col-lightblue: #edf3f7,
+    col-beige: #f7ede8
+);
+@function color($color){
+    @return map-get($colors, $color)
+}
+
+$font-sizes: (
+    xs: 1.2rem,
+    sm: 1.4rem,
+    md: 1.6rem,
+    lg: 2.25rem,
+    xl: 3.65rem,
+    xxl: 6rem
+);
+@function size($size){
+    @return map-get($font-sizes, $size)
+};
