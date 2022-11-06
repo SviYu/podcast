@@ -1,6 +1,6 @@
 $colors: (
     col-black: #000,
-    col-grey: #4d4d4d,
+    col-grey: #b9b2ae,
     col-red: #cd4631,
     col-blue: #81adc8,
     col-lightblue: #edf3f7,
@@ -21,3 +21,32 @@ $font-sizes: (
 @function size($size){
     @return map-get($font-sizes, $size)
 };
+
+@mixin response($breakpoint){
+    @if($breakpoint == sm){
+        @media(min-width: 576px){
+            @content;
+        }
+    }
+    @if($breakpoint == md){
+        @media(min-width: 768px){
+            @content;
+        }
+    }
+    @if($breakpoint == lg){
+        @media(min-width: 992px){
+            @content;
+        }
+    }
+    @if($breakpoint == xl){
+        @media(min-width: 1200px){
+            @content;
+        }
+    }
+    @if($breakpoint == xxl){
+        @media(min-width: 1320px){
+            @content;
+        }
+    }
+   
+}

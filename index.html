@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/main.css">
     <!-- fonts -->
@@ -12,9 +15,219 @@
         rel="stylesheet">
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/a7e8d46863.js" crossorigin="anonymous"></script>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/vectors/fire.svg">
     <title>Podcast</title>
 </head>
 <body>
-  
+    <!-- Header -->
+  <header class="header" id="header">
+    <nav class="navbar container-fluid">
+        <div class="nav-left">
+            <img class="nav-logo" src="assets/vectors/logo.svg" alt="Logo">
+            <div class="menu">
+                <ul class="menu-list list-unstyled">
+                   <li class="menu-item">
+                    <a class="menu-link" href="#">Episodes</a>
+                   </li> 
+                   <li class="menu-item">
+                    <a class="menu-link" href="#">About</a>
+                   </li> 
+                   <li class="menu-item">
+                    <a class="menu-link" href="#">Blog</a>
+                   </li> 
+                </ul>
+            </div>
+        </div>
+        <div class="nav-right">
+            <button type="button" class="btn btn-outline-dark btn-recent text-uppercase">Recent episodes</button>
+            <button type="button" class="btn btn-dark btn-subscribe text-uppercase">Subscribe</button>
+        </div>
+    </nav>
+    <div class="header-text-content">
+        <h1 class="header-title text-center">Your Daily<br><span class="header-title-red">Podcact</span></h1>
+        <p class="header-undertitle text-center pt-3">We cover all kinds of categories and
+        a weekly special guest.</p>
+        <button type="button" class="btn btn-dark btn-header text-uppercase">Subscribe</button>
+    </div>
+    <!-- swirls -->
+    <img class="heroSwirl-left" src="assets/vectors/heroShapeSwirl.svg" alt="Hero Swirl">
+    <img class="heroSwirl-right" src="assets/vectors/heroShiningStars.svg" alt="Hero Shining Stars">
+    <img class="heroSwirl-bottom" src="assets/vectors/scribbleVertRed.svg" alt="Hero Shining Stars">
+
+    <!-- cards wrapper -->
+    <div class="cards-wrapper">
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/confidence.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a> 
+                </div>
+                <h2 class="header-card-title">Self-confidence</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/mind.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="header-card-title">Perplexed Mind</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/rights.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="header-card-title">Women's Rights</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/class.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="header-card-title">Social Class</h2>
+            </div>
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/tesla.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="header-card-title">Tesla Autopilot</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="header-card">
+                <img class="header-card-img" src="assets/img/covid.png" alt="Self-confidence">
+                <div class="header-card-platform">
+                    <a href="#"><i class="fa-solid fa-podcast"></i></a>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+                <h2 class="header-card-title">COVID-19 Endemic</h2>
+            </div>
+        </a>
+    </div>
+    <!-- supported -->
+    <div class="supported">
+        <div class="supported-title">Supported by:</div>
+        <div>
+            <img class="supported-firm" src="assets/vectors/spotify.svg" alt="Spotify">
+            <img class="supported-firm" src="assets/vectors/googlePodcast.svg" alt="Google Podcast">
+            <img class="supported-firm" src="assets/vectors/youtube.svg" alt="Youtube">
+        </div>
+    </div>
+  </header>
+<!-- End of Header -->
+
+<!-- Section One -->
+  <section class="section-one" id="sectionOne">
+    <h2 class="section-one-title text-center">Talk. Listen. Get inspired by every minute of it.</h2>
+        <div class="section-one-wrapper">
+            <div class="section-one-box">
+                <img class="section-one-img" src="assets/vectors/head.svg" alt="Head">
+                <p class="section-one-text text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, iure blanditiis ut deserunt ratione.</p>
+            </div>
+            <div class="section-one-box">
+                <img class="section-one-img" src="assets/vectors/lamp.svg" alt="Head">
+                <p class="section-one-text text-center">Voluptas dicta architecto facere eaque, voluptatum tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <!-- quote -->
+        <div class="quote">
+            <!-- swirls -->
+            <img class="quote-swirl-left" src="assets/vectors/swirlRed.svg" alt="Red Swirl">
+            <img class="quote-swirl-right" src="assets/vectors/star2.svg" alt="Black Star">
+            <img class="quote-swirl-bottom" src="assets/vectors/scribbleVertBlack.svg" alt="Black scribble">
+
+            <span class="quote-sign"><i class="fa-solid fa-quote-left"></i></span>
+            <p class="quote-text text-center">One of the best daily podcasts that covers every topic on Spotify.</p>
+            <div class="quote-author">
+                <div class="quote-avatar-box">
+                    <img class="quote-img" src="assets/img/JohnAvatar.png" alt="John Smith">
+                    <p class="quote-name">John Smith</p>
+                </div>
+                <div class="quote-job-box">
+                    <img class="quote-job-img" src="assets/vectors/spotifyColor.svg" alt="Spotify Manager">
+                    <p class="quote-name">Social Community Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End of Section One -->
+<!-- Feedback section -->
+<section class="section-two" id="sectionTwo">
+    <div class="section-two-title">
+        <img src="assets/vectors/roundSparkle.svg" alt="Red sparkle">
+        <h2 class="section-one-title text-center">What our listeners say</h2>
+        <p class="section-two-undertitle">Their experience throughout every platform</p>
+    </div>
+    <div class="feedback-wrapper">
+        <div class="feedback-box">
+            <span class="quote-sign"><i class="fa-solid fa-quote-left"></i></span>
+            <p class="feedback-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat dolorum quo eveniet illum, vitae perferendis sunt atque minima doloremque necessitatibus?</p>
+            <div class="feedback-author">
+                <div class="name-box">
+                    <img class="quote-img" src="assets/img/LunaAvatar.png" alt="John Smith">
+                    <p class="quote-name">Luna Lovegood, </p>
+                </div>
+                <div class="job-box">
+                    <img class="quote-job-img" src="assets/vectors/spotifyColor.svg" alt="Spotify Manager">
+                    <p class="quote-name">Spotify</p>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-box">
+            <span class="quote-sign"><i class="fa-solid fa-quote-left"></i></span>
+            <p class="feedback-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo vitae quia libero aspernatur assumenda iusto facere dicta tempora! Voluptatibus!</p>
+            <div class="feedback-author">
+                <div class="name-box">
+                    <img class="quote-img" src="assets/img/EmilyAvatar.png" alt="John Smith">
+                    <p class="quote-name">Emily Blunt, </p>
+                </div>
+                <div class="job-box">
+                    <img class="quote-job-img" src="assets/vectors/googlePodcastIcon.svg" alt="Spotify Manager">
+                    <p class="quote-name">Google Podcast</p>
+                </div>
+            </div>
+        </div>
+        <div class="feedback-box">
+            <span class="quote-sign"><i class="fa-solid fa-quote-left"></i></span>
+            <p class="feedback-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nemo vitae quia libero aspernatur assumenda iusto facere dicta tempora! Voluptatibus!</p>
+            <div class="feedback-author">
+                <div class="name-box">
+                    <img class="quote-img" src="assets/img/MiaAvatar.png" alt="Mia Winters">
+                    <p class="quote-name">Mia Winters, </p>
+                </div>
+                <div class="job-box">
+                    <img class="quote-job-img" src="assets/vectors/applePodcastIcon.svg" alt="Spotify Manager">
+                    <p class="quote-name">Apple Podcast</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-btns">
+        <div class="next-feedback"><i class="fa-sharp fa-solid fa-chevron-right"></i></div>
+        <div class="prev-feedback"><i class="fa-sharp fa-solid fa-chevron-left"></i></div>
+    </div>
+    <!-- swirls -->
+    <img class="feedback-swirl-bottom" src="assets/vectors/scribbleVertBlack.svg" alt="Black scribble">
+</section>
+<!-- End of Feedback section -->
 </body>
 </html>

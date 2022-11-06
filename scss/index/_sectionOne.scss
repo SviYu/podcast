@@ -1,0 +1,94 @@
+.section-one{
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+
+    &-title{
+        font-size: size(lg) + .3;
+        padding: 6rem 0 2rem;
+    }
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-img{
+        width: 20rem;
+        height: 20rem;
+        margin: 2rem 0;
+    }
+    &-text{
+        @extend .header-undertitle;
+    }
+}
+/* quote */
+.quote{
+    margin: 3rem 10%;
+    width: 80%;
+    padding-bottom: 4rem;
+    background-color: color(col-beige);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &-sign{
+        color: color(col-red);
+        font-size: size(xl);
+        padding:2rem 0;
+    }
+    &-text{
+        font-weight: bold;
+        font-size: size(lg);
+        width: 80%;
+    }
+    &-author{
+        justify-content: center;
+        padding: 1.5rem 0;
+
+        .quote-avatar-box, .quote-job-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-img{
+        width: 5rem;
+        height: 5rem;
+    }
+    &-job-img{
+        width: 2rem;
+        height: 2rem;
+    }
+    &-name{
+        font-size: size(xs);
+    }
+    &-swirl-left{
+        position: absolute;
+        bottom: -1rem;
+        left: -4rem;
+        width: 8rem;
+        height: auto;
+    }
+    &-swirl-right{
+        position: absolute;
+        top: -3rem;
+        right: -2rem;
+        width: 8rem;
+        height: auto;
+    }
+    &-swirl-bottom{
+        position: absolute;
+        bottom: -4rem;
+        height: 8rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}

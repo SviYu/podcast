@@ -1,7 +1,12 @@
 @import 'base';
+@import 'index/header';
+@import 'index/sectionOne';
+@import 'index/sectionTwo';
 
 body{
-    font-family: 'Montserrat Alternates', sans-serif;;
+    font-family: 'Montserrat Alternates', sans-serif;
+    min-width: 375px;
+    margin: auto;
 }
 
 *{
