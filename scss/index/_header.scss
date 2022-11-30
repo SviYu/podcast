@@ -30,7 +30,7 @@
         font-size: size(sm);
         margin-left: 3rem;
         text-decoration: none;
-        transition: all .3s;
+        transition: all .2s;
         &:hover{
             color: color(col-red);
         }
@@ -38,10 +38,14 @@
 }
 .nav-right{
     display: none;
+    @include response(lg){
+        display: flex;
+    }
     .btn-recent{
         font-weight: bold;
         font-size: size(sm);
         border: .15rem solid color(col-black);
+        margin-right: 10px;
     }
     .btn-subscribe{
         font-weight: bold;
@@ -63,19 +67,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .header-title{
         font-weight: bold;
         font-size: size(xl);
+
+        @include response (xl){
+            font-size: size(xxl);
+        }
         &-red{
             color: color(col-red);
         }
+
     }
    
     .btn-header{
-       padding:1.2rem 2.4rem;
+        width: 15rem;
+        height: 4rem;
+        font-size: size(sm);
         box-shadow: .25rem .25rem color(col-grey);
         transition: all .3s;
         margin: 3rem 0;
+        @include response (xl) {
+            width: 20rem;
+            height: 5rem;
+            font-size: size(md);
+        }
     
         &:hover {
             background-color: color(col-red);
@@ -88,6 +105,9 @@
 .header-undertitle{
     font-size: size(xs);
     width: 70%;
+    @include response (xl) {
+        font-size: size(md);
+    }
 }
 /* Swirls */
 .heroSwirl-left{
@@ -115,16 +135,34 @@
 .cards-wrapper{
     display: flex;
     overflow: scroll;
-    margin: 2rem auto 4rem;
+    margin: 2rem auto 6rem;
+    user-select: none;
     .header-card{
         position: relative;
         width: 15rem;
         height:15rem;
         margin-right: 1rem;
+
+        @include response(lg){
+            width: 23rem;
+            height: 23rem;
+        }
+        @include response(xl){
+            width: 32rem;
+            height: 32rem;
+        }
         
         &-img{
             width: 15rem;
             height:15rem;
+            @include response(lg) {
+                width: 23rem;
+                height: 23rem;
+            }
+            @include response(xl) {
+                width: 32rem;
+                height: 32rem;
+            }
 
         }
         &-platform{
@@ -135,6 +173,12 @@
             i{
                 color: #fff;
                 padding-left: .5rem;
+                @include response(lg){
+                    font-size: size(md);
+                }
+                @include response(xl){
+                    font-size: size(lg);
+                }
                 &:hover{
                     color: color(col-blue);
                 }
@@ -148,6 +192,13 @@
             font-weight: bold;
             font-size: size(sm);
             margin-left: .5rem;
+
+            @include response(lg) {
+                font-size: size(md);
+            }
+            @include response(xl) {
+                font-size: size(lg);
+            }
         }
     }
 }
@@ -156,7 +207,7 @@
     max-width: 100rem;
     border-top: .1rem solid color(col-black);
     border-bottom: .1rem solid color(col-black);
-    margin: 5rem auto 14rem;
+    margin: 5rem auto;
     padding: 2rem 0;
     display: flex;
     justify-content: space-between;
@@ -168,6 +219,9 @@
     &-firm{
         padding-right: 6rem;
     }
-
     display: none;
+        @include response(lg) {
+            display: flex;
+        }
+
 }

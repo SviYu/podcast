@@ -1,16 +1,30 @@
 .section-one{
-    padding: 1rem;
     width: 100%;
     position: relative;
+    padding: 0 2rem 5rem;
+    @include response(lg) {
+        padding: 0 5rem 5 rem;
+    }
 
     &-title{
-        font-size: size(lg) + .3;
+        font-size: size(lg);
         padding: 6rem 0 2rem;
+        margin: 0 auto;
+        font-weight: bold;
+        max-width: 50rem;
+        @include response(lg) {
+            font-size: size(xl);
+        }
+
     }
     &-wrapper{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include response(lg) {
+           flex-direction: row;
+           margin-bottom: 5rem;
+        }
     }
     &-box{
         display: flex;
@@ -45,18 +59,32 @@
     }
     &-text{
         font-weight: bold;
-        font-size: size(lg);
+        font-size: size(md);
         width: 80%;
+        @include response(lg) {
+            font-size: size(lg);
+        }
     }
     &-author{
         justify-content: center;
         padding: 1.5rem 0;
+
+        @include response(lg) {
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
 
         .quote-avatar-box, .quote-job-box{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            
+            @include response(lg){
+                flex-direction: row;
+                height: 5rem;
+            }
         }
     }
     &-img{
@@ -66,9 +94,11 @@
     &-job-img{
         width: 2rem;
         height: 2rem;
+        
     }
     &-name{
         font-size: size(xs);
+        margin: .5rem;
     }
     &-swirl-left{
         position: absolute;
@@ -90,5 +120,6 @@
         height: 8rem;
         left: 50%;
         transform: translate(-50%, 0);
+        z-index: 1;
     }
 }
