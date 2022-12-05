@@ -36,23 +36,24 @@
     }
 }
 .feedback-wrapper{
-    @include response(lg) {
-        display: flex;
+    width: 100%;
+    height: fit-content;
+
+    @include response (xl){
+        width: 70%;
     }
+    
     .feedback-box{
         background-color: white;
-        /* max-width: 56rem;
-        height:auto; */
         padding: 2rem;
         margin: 2rem auto;
-       /*  display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
 
-        /* @include response(lg) {
-            width: 56rem;
-        } */
+        .quote-sign{
+            margin-left: 10%;
+        }
         .feedback-text{
+            width: 80%;
+            margin: 1rem auto 2rem;
             font-size: size(sm);
             @include response(lg) {
                 font-size: size(lg);
@@ -60,8 +61,16 @@
         }
         .feedback-author{
             display: flex;
+            flex-direction: column;
             justify-content: left;
             align-items: center;
+            @extend .feedback-text;
+
+            @include response(md){
+                flex-direction: row;
+                justify-content: center;
+            }
+
         }
         .name-box, .job-box{
             display: flex;
@@ -69,15 +78,7 @@
         }
     }
 }
-.feedback-btns{
-    display: none;
-    text-align: center;
-    font-size: 3rem;
-        @include response(lg) {
-            /* display: flex; */
-            justify-content: space-around;
-        }
-}
+
 .prev-feedback,.next-feedback{
     height: 5rem;
     width: 5rem;
@@ -91,10 +92,30 @@
         border-color: color(col-red);
     }
 }
+
 .feedback-swirl-bottom{
     @extend .quote-swirl-bottom
 }
-.swiper {
-    width: 100%;
-    height: 60rem;
+
+.swiper-slide{
+    height: fit-content;
+}
+
+.swiper-button-prev, 
+.swiper-button-next{
+    width: 2rem;
+    height: 2rem;
+    border: .1rem solid color(col-black);
+    padding: 1.5rem;
+    border-radius: 50%;
+    transition: all .2s;
+}
+.swiper-button-prev:hover, 
+.swiper-button-next:hover{
+   border-color: color(col-red);
+}
+.swiper-button-prev:after, 
+.swiper-button-next:after{
+    color: color(col-black);
+    font-size: size(md);
 }

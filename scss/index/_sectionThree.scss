@@ -1,0 +1,63 @@
+.section-three {
+    padding: 0 2rem 5rem;
+    width: 100%;
+    position: relative;
+
+    @include response(lg) {
+        padding: 0 5rem 5rem;
+    }
+
+    &-header {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &-title {
+        @extend .section-one-title;
+    }
+
+    &-undertitle {
+        @extend .header-undertitle;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .black-scribble {
+        position: absolute;
+        top: -1rem;
+        right: -6rem;
+        width: 10rem;
+        height: 10rem;
+
+    }
+}
+.benefits-wrapper{
+    width: 80%;
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+}
+.benefit-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 2rem 2.5rem;
+}
+.benefit-title{
+    font-weight: bold;
+    font-size: size(md);
+}
+.benefit-text{
+    font-size: size(sm);
+}
+.sec-three-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-section-three{
+    @extend .btn-header;
+}

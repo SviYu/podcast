@@ -43,23 +43,40 @@
     }
     .btn-recent{
         font-weight: bold;
-        font-size: size(sm);
+        font-size: size(md);
+        text-transform: uppercase;
+        text-decoration: none;
+        color: color(col-black);
         border: .15rem solid color(col-black);
+        border-radius: .3rem;
+        padding: .5rem;
         margin-right: 10px;
-    }
-    .btn-subscribe{
-        font-weight: bold;
-        font-size: size(xs);
-        box-shadow: .25rem .25rem color(col-grey);
-        transition: all .3s;
+        transition: all .2s;
         &:hover{
-            background-color: color(col-red);
-            border-color: color(col-red);
-            box-shadow: none;
-            transform: translateY(.1rem) translateX(.1rem);
+            background-color: color(col-black);
+            color: #fff;
         }
-
     }
+}
+.btn-subscribe{
+    font-weight: bold;
+    color: #fff;
+    background-color: color(col-black);
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: .3rem;
+    padding: 1rem;
+    font-size: size(xs);
+    box-shadow: .25rem .25rem color(col-grey);
+    transition: all .3s;
+    &:hover{
+        background-color: color(col-red);
+        color: #fff;
+        border-color: color(col-red);
+        box-shadow: none;
+        transform: translateY(.1rem) translateX(.1rem);
+    }
+
 }
 /* Header */
 .header-text-content{
@@ -81,25 +98,33 @@
 
     }
    
-    .btn-header{
-        width: 15rem;
-        height: 4rem;
-        font-size: size(sm);
-        box-shadow: .25rem .25rem color(col-grey);
-        transition: all .3s;
-        margin: 3rem 0;
-        @include response (xl) {
-            width: 20rem;
-            height: 5rem;
-            font-size: size(md);
-        }
-    
-        &:hover {
-            background-color: color(col-red);
-            border-color: color(col-red);
-            box-shadow: none;
-            transform: translateY(.1rem) translateX(.1rem);
-        }
+}
+.btn-header{
+    width: 15rem;
+    height: 4rem;
+    font-size: size(sm);
+    box-shadow: .25rem .25rem color(col-grey);
+    background-color: color(col-black);
+    border-radius: .5rem;
+    transition: all .3s;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    margin: 3rem 0;
+    @include response (xl) {
+        width: 20rem;
+        height: 5rem;
+        font-size: size(md);
+    }
+
+    &:hover {
+        background-color: color(col-red);
+        border-color: color(col-red);
+        color: #fff;
+        box-shadow: none;
+        transform: translateY(.1rem) translateX(.1rem);
     }
 }
 .header-undertitle{
