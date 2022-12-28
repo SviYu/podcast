@@ -1,0 +1,125 @@
+.section-one{
+    width: 100%;
+    position: relative;
+    padding: 0 2rem 5rem;
+    @include response(lg) {
+        padding: 0 5rem 5 rem;
+    }
+
+    &-title{
+        font-size: size(lg);
+        padding: 6rem 0 2rem;
+        margin: 0 auto;
+        font-weight: bold;
+        max-width: 50rem;
+        @include response(lg) {
+            font-size: size(xl);
+        }
+
+    }
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include response(lg) {
+           flex-direction: row;
+           margin-bottom: 5rem;
+        }
+    }
+    &-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-img{
+        width: 20rem;
+        height: 20rem;
+        margin: 2rem 0;
+    }
+    &-text{
+        @extend .header-undertitle;
+    }
+}
+/* quote */
+.quote{
+    margin: 3rem 10%;
+    width: 80%;
+    padding-bottom: 4rem;
+    background-color: color(col-beige);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &-sign{
+        color: color(col-red);
+        font-size: size(xl);
+        padding:2rem 0;
+    }
+    &-text{
+        font-weight: bold;
+        font-size: size(md);
+        width: 80%;
+        @include response(lg) {
+            font-size: size(lg);
+        }
+    }
+    &-author{
+        justify-content: center;
+        padding: 1.5rem 0;
+
+        @include response(lg) {
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+
+        .quote-avatar-box, .quote-job-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            @include response(lg){
+                flex-direction: row;
+                height: 5rem;
+            }
+        }
+    }
+    &-img{
+        width: 5rem;
+        height: 5rem;
+    }
+    &-job-img{
+        width: 2rem;
+        height: 2rem;
+        
+    }
+    &-name{
+        font-size: size(xs);
+        margin: .5rem;
+    }
+    &-swirl-left{
+        position: absolute;
+        bottom: -1rem;
+        left: -4rem;
+        width: 8rem;
+        height: auto;
+    }
+    &-swirl-right{
+        position: absolute;
+        top: -3rem;
+        right: -2rem;
+        width: 8rem;
+        height: auto;
+    }
+    &-swirl-bottom{
+        position: absolute;
+        bottom: -4rem;
+        height: 8rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        z-index: 1;
+    }
+}

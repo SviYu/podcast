@@ -1,0 +1,121 @@
+.section-two{
+    background-color: color(col-lightblue);
+    padding: 0 2rem 5rem;
+    width: 100%;
+    position: relative;
+    @include response(lg) {
+        padding: 0 5rem 5rem; 
+    }
+
+    &-header{
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+    }
+    &-title{
+        @extend .section-one-title;
+    }
+    &-undertitle{
+        @extend .header-undertitle;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+    .red-sparkle{
+        position: absolute;
+        top: 2rem;
+        left: -2rem;
+        width: 5rem;
+        height: 5rem;
+        @include response(lg){
+            width: 10rem;
+            height: 10rem;
+            top: 2rem;
+            left: -4rem;
+        }
+    }
+}
+.feedback-wrapper{
+    width: 100%;
+    height: fit-content;
+
+    @include response (xl){
+        width: 70%;
+    }
+    
+    .feedback-box{
+        background-color: white;
+        padding: 2rem;
+        margin: 2rem auto;
+
+        .quote-sign{
+            margin-left: 10%;
+        }
+        .feedback-text{
+            width: 80%;
+            margin: 1rem auto 2rem;
+            font-size: size(sm);
+            @include response(lg) {
+                font-size: size(lg);
+            }
+        }
+        .feedback-author{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
+            @extend .feedback-text;
+
+            @include response(md){
+                flex-direction: row;
+                justify-content: center;
+            }
+
+        }
+        .name-box, .job-box{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.prev-feedback,.next-feedback{
+    height: 5rem;
+    width: 5rem;
+    border: .2rem solid color(col-black);
+    border-radius: 50%;
+    margin: 5rem;
+    transition: all .2s;
+
+    &:hover {
+        color: color(col-red);
+        border-color: color(col-red);
+    }
+}
+
+.feedback-swirl-bottom{
+    @extend .quote-swirl-bottom
+}
+
+.swiper-slide{
+    height: fit-content;
+}
+
+.swiper-button-prev, 
+.swiper-button-next{
+    width: 2rem;
+    height: 2rem;
+    border: .1rem solid color(col-black);
+    padding: 1.5rem;
+    border-radius: 50%;
+    transition: all .2s;
+}
+.swiper-button-prev:hover, 
+.swiper-button-next:hover{
+   border-color: color(col-red);
+}
+.swiper-button-prev:after, 
+.swiper-button-next:after{
+    color: color(col-black);
+    font-size: size(md);
+}
