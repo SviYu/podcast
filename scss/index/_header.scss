@@ -107,11 +107,13 @@
     background-color: color(col-black);
     border-radius: .5rem;
     transition: all .3s;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    padding: 1rem;
+    align-self: center;
     margin: 3rem 0;
     @include response (xl) {
         width: 20rem;
