@@ -79,21 +79,6 @@
             margin-bottom: 1.5rem;
             transition: all .2s;
         }
-        .key-words-box{
-            display: flex;
-            p{
-                font-size: size(xs);
-                border: .1rem solid #4d4d4d;
-                border-radius: .4rem;
-                width: fit-content;
-                padding: .5rem 1rem;
-                margin-right: 1rem;
-                transition: all .2s;
-                &:hover{
-                    background-color: rgba(#4b4b4b, .1);
-                }
-            }
-        }
     }
     .card-right{
         @include response(md) {
@@ -140,6 +125,23 @@
         }
     }
    }
+}
+.key-words-box {
+    display: flex;
+
+    .key-words {
+        font-size: size(xs);
+        border: .1rem solid #4d4d4d;
+        border-radius: .4rem;
+        width: fit-content;
+        padding: .5rem 1rem;
+        margin-right: 1rem;
+        transition: all .2s;
+
+        &:hover {
+            background-color: rgba(#4b4b4b, .1);
+        }
+    }
 }
 .episodes-wrapper-card:nth-child(2) .card-title,
 .episodes-wrapper-card:nth-child(5) .card-title,

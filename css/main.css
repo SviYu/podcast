@@ -130,12 +130,12 @@
   transform: translateY(0.1rem) translateX(0.1rem);
 }
 
-.header-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
+.header-undertitle, .section-articles-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
   font-size: 1.2rem;
   width: 70%;
 }
 @media (min-width: 1200px) {
-  .header-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
+  .header-undertitle, .section-articles-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
     font-size: 1.6rem;
   }
 }
@@ -284,7 +284,7 @@
     padding: 0 5rem 5 rem;
   }
 }
-.section-one-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
+.section-one-title, .section-articles-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
   font-size: 2.25rem;
   padding: 6rem 0 2rem;
   margin: 0 auto;
@@ -292,7 +292,7 @@
   max-width: 50rem;
 }
 @media (min-width: 992px) {
-  .section-one-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
+  .section-one-title, .section-articles-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
     font-size: 3.65rem;
   }
 }
@@ -665,21 +665,6 @@
   margin-bottom: 1.5rem;
   transition: all 0.2s;
 }
-.episodes-wrapper-card .card-left .key-words-box {
-  display: flex;
-}
-.episodes-wrapper-card .card-left .key-words-box p {
-  font-size: 1.2rem;
-  border: 0.1rem solid #4d4d4d;
-  border-radius: 0.4rem;
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  transition: all 0.2s;
-}
-.episodes-wrapper-card .card-left .key-words-box p:hover {
-  background-color: rgba(75, 75, 75, 0.1);
-}
 @media (min-width: 768px) {
   .episodes-wrapper-card .card-right {
     width: 60%;
@@ -722,6 +707,22 @@
   border: 0.4rem solid #fff;
   border-radius: 50%;
   margin-left: -1rem;
+}
+
+.key-words-box {
+  display: flex;
+}
+.key-words-box .key-words {
+  font-size: 1.2rem;
+  border: 0.1rem solid #4d4d4d;
+  border-radius: 0.4rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  transition: all 0.2s;
+}
+.key-words-box .key-words:hover {
+  background-color: rgba(75, 75, 75, 0.1);
 }
 
 @media (min-width: 992px) {
@@ -892,6 +893,87 @@
   bottom: -3rem;
   left: -1rem;
   z-index: -1;
+}
+
+.section-articles {
+  padding: 0 2rem 5rem;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .section-articles {
+    padding: 0 5rem 5rem;
+  }
+}
+.section-articles-undertitle {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.articles-wrapper {
+  position: relative;
+  margin: 3rem 0 5rem;
+}
+@media (min-width: 992px) {
+  .articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+.articles-wrapper-card {
+  width: 90%;
+  margin: 0 5%;
+  border: 0.15rem solid #000;
+  border-radius: 0.5rem;
+  padding: 1.6rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+.articles-wrapper-card:hover {
+  box-shadow: 1rem 1rem 0rem #000;
+}
+.articles-wrapper-card:hover .articles-title {
+  color: #cd4631;
+}
+.articles-wrapper-card img {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.articles-wrapper-card .articles-subtitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.articles-wrapper-card .articles-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin: 1rem 0 1.5rem;
+}
+.articles-wrapper-card .articles-bottom-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-articles-star {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+  top: 10rem;
+  left: -1.5rem;
+  z-index: -1;
+  transform: rotate(10deg);
+}
+
+.section-articles-swirl {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 3rem;
+  z-index: -1;
+  transform: rotate(135deg);
 }
 
 body {

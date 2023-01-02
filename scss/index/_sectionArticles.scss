@@ -1,0 +1,86 @@
+.section-articles{
+    padding: 0 2rem 5rem;
+    width: 100%;
+    position: relative;
+
+    @include response(lg) {
+        padding: 0 5rem 5rem;
+    }
+
+   
+
+    &-title {
+        @extend .section-one-title;
+    }
+
+    &-undertitle {
+        @extend .header-undertitle;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+.articles-wrapper{
+    position: relative;
+    margin: 3rem 0 5rem;
+    @include response(lg) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    &-card{
+        width: 90%;
+        margin: 0 5%;
+        border: .15rem solid color(col-black);
+        border-radius: .5rem;
+        padding: 1.6rem;
+        background-color: #fff;
+        margin-bottom: 2rem;
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: 1rem 1rem 0rem color(col-black);
+        }
+        &:hover .articles-title{
+            color: color(col-red);
+        }
+
+        img{
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .articles-subtitle{
+            font-size: size(xs);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .articles-title{
+            font-size: size(lg);
+            font-weight: bold;
+            margin: 1rem 0 1.5rem;
+        }
+        .articles-bottom-box{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.section-articles-star {
+    width: 12rem;
+    height: auto;
+    position: absolute;
+    top: 10rem;
+    left: -1.5rem;
+    z-index: -1;
+    transform: rotate(10deg);
+}
+
+.section-articles-swirl {
+    width: 12rem;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 3rem;
+    z-index: -1;
+    transform: rotate(135deg);
+}
