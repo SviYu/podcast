@@ -98,7 +98,7 @@
   color: #cd4631;
 }
 
-.btn-header, .btn-episodes, .btn-section-three {
+.btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-section-three {
   width: 15rem;
   height: 4rem;
   font-size: 1.4rem;
@@ -116,13 +116,13 @@
   margin: 3rem 0;
 }
 @media (min-width: 1200px) {
-  .btn-header, .btn-episodes, .btn-section-three {
+  .btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-section-three {
     width: 20rem;
     height: 5rem;
     font-size: 1.6rem;
   }
 }
-.btn-header:hover, .btn-episodes:hover, .btn-section-three:hover {
+.btn-header:hover, .become-wrapper-card-top .become-price-block .btn-become:hover, .btn-episodes:hover, .btn-section-three:hover {
   background-color: #cd4631;
   border-color: #cd4631;
   color: #fff;
@@ -130,12 +130,12 @@
   transform: translateY(0.1rem) translateX(0.1rem);
 }
 
-.header-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
+.header-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
   font-size: 1.2rem;
   width: 70%;
 }
 @media (min-width: 1200px) {
-  .header-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
+  .header-undertitle, .section-five-undertitle, .section-episodes-undertitle, .section-three-undertitle, .section-two-undertitle, .section-one-text {
     font-size: 1.6rem;
   }
 }
@@ -284,7 +284,7 @@
     padding: 0 5rem 5 rem;
   }
 }
-.section-one-title, .section-episodes-title, .section-three-title, .section-two-title {
+.section-one-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
   font-size: 2.25rem;
   padding: 6rem 0 2rem;
   margin: 0 auto;
@@ -292,7 +292,7 @@
   max-width: 50rem;
 }
 @media (min-width: 992px) {
-  .section-one-title, .section-episodes-title, .section-three-title, .section-two-title {
+  .section-one-title, .section-five-title, .section-episodes-title, .section-three-title, .section-two-title {
     font-size: 3.65rem;
   }
 }
@@ -596,6 +596,9 @@
   margin: 0 auto;
 }
 
+.episodes-wrapper {
+  position: relative;
+}
 @media (min-width: 992px) {
   .episodes-wrapper {
     display: grid;
@@ -713,10 +716,151 @@
   margin-left: -1rem;
 }
 
+.episodes-swirl-top {
+  height: 8rem;
+  width: auto;
+  padding: 0;
+  position: absolute;
+  top: -5rem;
+  right: 0;
+}
+@media (min-width: 992px) {
+  .episodes-swirl-top {
+    height: 13rem;
+    top: -6rem;
+    right: -4rem;
+  }
+}
+
 .btn-episodes {
   padding: 0 2rem;
   width: fit-content;
   margin: 6rem auto 3rem;
+}
+
+.section-five {
+  padding: 0 2rem 5rem;
+  width: 100%;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .section-five {
+    padding: 0 5rem 5rem;
+  }
+}
+.section-five-header {
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
+}
+.section-five-undertitle {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-five-red-sparkle {
+  position: absolute;
+  top: 2rem;
+  left: -4rem;
+  transform: rotate(-90deg);
+}
+
+.become-wrapper {
+  position: relative;
+}
+.become-wrapper-card {
+  max-width: 40rem;
+  margin: 5%;
+}
+.become-wrapper-card-top {
+  border: 0.15rem solid #000;
+  border-radius: 0.5rem;
+  padding: 5rem 4rem 4rem;
+}
+.become-wrapper-card-top-title {
+  font-size: 3.65rem;
+  font-weight: bold;
+}
+.become-wrapper-card-top-undertext {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+.become-wrapper-card-top .become-price-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+.become-wrapper-card-top .become-price-block .btn-become {
+  width: 11rem;
+  margin: 0;
+}
+.become-wrapper-card-bottom {
+  border: 0.15rem solid #000;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 4rem;
+}
+
+.price-block .price {
+  color: #cd4631;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+}
+.price-block .month {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.become-wrapper-card-top-title-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.label {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #cd4631;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.member-top {
+  background-color: #fff;
+}
+
+.family-top, .family-bottom {
+  background-color: rgba(205, 70, 49, 0.1);
+  border: 0.15rem solid #cd4631;
+}
+
+.official-bottom {
+  background-color: #fff;
+}
+
+.section-five-star {
+  width: 7rem;
+  height: auto;
+  position: absolute;
+  top: -3rem;
+  right: -1rem;
+  z-index: -1;
+}
+
+.section-five-swirl {
+  width: 7rem;
+  height: auto;
+  position: absolute;
+  bottom: -3rem;
+  left: -1rem;
+  z-index: -1;
 }
 
 body {

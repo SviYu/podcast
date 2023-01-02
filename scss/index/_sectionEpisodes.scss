@@ -20,6 +20,7 @@
 }
 
 .episodes-wrapper{
+    position: relative;
    
     @include response(lg){
         display: grid;
@@ -133,6 +134,19 @@
         }
     }
    }
+}
+.episodes-swirl-top {
+    height: 8rem;
+    width: auto;
+    padding: 0;
+    position: absolute;
+    top: -5rem;
+    right: 0;
+    @include response(lg){
+        height: 13rem;
+        top: -6rem;
+        right: -4rem;
+    }
 }
 
 .btn-episodes{

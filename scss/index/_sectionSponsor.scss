@@ -1,0 +1,128 @@
+.section-five{
+    padding: 0 2rem 5rem;
+    width: 100%;
+    position: relative;
+
+    @include response(lg) {
+        padding: 0 5rem 5rem;
+    }
+
+    &-header {
+        width: fit-content;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    &-title {
+        @extend .section-one-title;
+    }
+
+    &-undertitle {
+        @extend .header-undertitle;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+.section-five-red-sparkle{
+    position: absolute;
+    top: 2rem;
+    left: -4rem;
+    transform: rotate(-90deg);
+}
+.become-wrapper{
+    position: relative;
+
+    &-card{
+        max-width: 40rem;
+        margin: 5%;
+
+        &-top{
+            border: .15rem solid color(col-black);
+            border-radius: .5rem;
+            padding: 5rem 4rem 4rem;
+
+            &-title{
+                font-size: size(xl);
+                font-weight: bold;
+            }
+            &-undertext{
+                font-size: size(sm);
+                margin-top: 2rem;
+            }
+            .become-price-block{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 3rem;
+
+                .btn-become{
+                    @extend .btn-header;
+                    width: 11rem;
+                    margin: 0;
+                }
+            }
+        }
+        &-bottom{
+            border: .15rem solid color(col-black);
+            border-radius: .5rem;
+            margin-top: 1rem;
+            padding: 4rem;
+        }
+    }
+}
+.price-block{
+    .price{
+        color: color(col-red);
+        font-size: size(md);
+        font-weight: bold;
+        margin: 0;
+    }
+    .month{
+        font-size: size(xs);
+        font-weight: bold;
+        margin: 0;
+    }
+}
+.become-wrapper-card-top-title-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.label{
+    margin: 0;
+    text-transform: uppercase;
+    font-size: size(xs) - .4;
+    font-weight: bold;
+    color: #fff;
+    background-color: color(col-red);
+    padding: .4rem;
+    border-radius: .4rem;
+
+}
+.member-top{
+    background-color: #fff;
+}
+.family-top, .family-bottom{
+    background-color: rgba(color(col-red), .1);
+    border: .15rem solid color(col-red);
+}
+.official-bottom{
+    background-color: #fff;
+}
+.section-five-star{
+    width: 7rem;
+    height: auto;
+    position: absolute;
+    top: -3rem;
+    right: -1rem;
+    z-index: -1;
+}
+.section-five-swirl{
+    width: 7rem;
+    height: auto;
+    position: absolute;
+    bottom: -3rem;
+    left: -1rem;
+    z-index: -1;
+}
