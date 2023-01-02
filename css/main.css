@@ -581,11 +581,10 @@
 }
 
 .section-episodes {
+  background-color: #f7ede8;
   padding: 0 2rem 5rem;
   width: 100%;
   position: relative;
-  background-color: #f7ede8;
-  margin: 4rem auto;
 }
 @media (min-width: 992px) {
   .section-episodes {
@@ -597,15 +596,55 @@
   margin: 0 auto;
 }
 
+@media (min-width: 992px) {
+  .episodes-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
 .episodes-wrapper-card {
-  /* width: 100%; */
-  height: fit-content;
+  width: 90%;
+  height: auto;
   border: 0.15rem solid #000;
   border-radius: 1rem;
   background-color: #fff;
-  padding: 3rem;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  padding: 2rem;
+  margin: 2rem 5%;
+  transition: all 0.2s;
+}
+.episodes-wrapper-card:nth-child(odd) {
+  box-shadow: 1rem 1rem 0rem #81adc8;
+}
+@media (min-width: 768px) {
+  .episodes-wrapper-card {
+    display: flex;
+    justify-content: space-between;
+  }
+  .episodes-wrapper-card:nth-child(odd) {
+    box-shadow: none;
+  }
+  .episodes-wrapper-card:hover {
+    box-shadow: 1rem 1rem 0rem #81adc8;
+  }
+  .episodes-wrapper-card:hover .card-left img {
+    transform: scale(110%);
+  }
+}
+@media (min-width: 768px) {
+  .episodes-wrapper-card .card-left {
+    width: 37%;
+    overflow: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .episodes-wrapper-card .card-left {
+    width: 45%;
+  }
+}
+@media (min-width: 1200px) {
+  .episodes-wrapper-card .card-left {
+    width: 35%;
+  }
 }
 .episodes-wrapper-card .card-left img {
   width: 100%;
@@ -613,6 +652,7 @@
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
+  transition: all 0.2s;
 }
 .episodes-wrapper-card .card-left .key-words-box {
   display: flex;
@@ -624,6 +664,25 @@
   width: fit-content;
   padding: 0.5rem 1rem;
   margin-right: 1rem;
+  transition: all 0.2s;
+}
+.episodes-wrapper-card .card-left .key-words-box p:hover {
+  background-color: rgba(75, 75, 75, 0.1);
+}
+@media (min-width: 768px) {
+  .episodes-wrapper-card .card-right {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .episodes-wrapper-card .card-right {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .episodes-wrapper-card .card-right {
+    width: 62%;
+  }
 }
 .episodes-wrapper-card .card-right .text-wrapper .card-subtitle {
   color: #cd4631;
