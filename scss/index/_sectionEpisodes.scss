@@ -37,13 +37,19 @@
     padding: 2rem;
     margin: 2rem 5%;
     transition: all .2s;
-        &:nth-child(odd) {
+        &:nth-child(even) {
             box-shadow: 1rem 1rem 0rem color(col-blue);
+        }
+        &:nth-child(even) .card-title{
+            color: color(col-red);
+            @include response(lg) {
+                color: color(col-black)
+            }
         }
         @include response(md) {
            display: flex;
            justify-content: space-between;
-           &:nth-child(odd) {
+           &:nth-child(even) {
                box-shadow: none;
            }
            &:hover{
@@ -134,6 +140,13 @@
         }
     }
    }
+}
+.episodes-wrapper-card:nth-child(2) .card-title,
+.episodes-wrapper-card:nth-child(5) .card-title,
+.episodes-wrapper-card:nth-child(6) .card-title{
+    @include response(lg){
+        color: color(col-red);
+    }
 }
 .episodes-swirl-top {
     height: 8rem;

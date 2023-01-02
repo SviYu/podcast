@@ -32,10 +32,17 @@
 }
 .become-wrapper{
     position: relative;
+    @include response(lg) {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33%);
+        margin-top: 2rem;
+    }
 
     &-card{
-        max-width: 40rem;
+        width: 90%;
         margin: 5%;
+
+
 
         &-top{
             border: .15rem solid color(col-black);
@@ -59,6 +66,8 @@
                 .btn-become{
                     @extend .btn-header;
                     width: 11rem;
+                    height: 3rem;
+                    font-size: size(sm);
                     margin: 0;
                 }
             }
@@ -97,18 +106,22 @@
     color: #fff;
     background-color: color(col-red);
     padding: .4rem;
+    margin-left: 1rem;
     border-radius: .4rem;
-
+    text-align: center;
 }
-.member-top{
+.member-top, .member-bottom{
     background-color: #fff;
 }
 .family-top, .family-bottom{
     background-color: rgba(color(col-red), .1);
     border: .15rem solid color(col-red);
 }
-.official-bottom{
+.official-bottom, .official-top{
     background-color: #fff;
+}
+.member-bottom, .family-bottom, .official-bottom{
+    height: 18rem;
 }
 .section-five-star{
     width: 7rem;

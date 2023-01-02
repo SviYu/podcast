@@ -615,15 +615,23 @@
   margin: 2rem 5%;
   transition: all 0.2s;
 }
-.episodes-wrapper-card:nth-child(odd) {
+.episodes-wrapper-card:nth-child(even) {
   box-shadow: 1rem 1rem 0rem #81adc8;
+}
+.episodes-wrapper-card:nth-child(even) .card-title {
+  color: #cd4631;
+}
+@media (min-width: 992px) {
+  .episodes-wrapper-card:nth-child(even) .card-title {
+    color: #000;
+  }
 }
 @media (min-width: 768px) {
   .episodes-wrapper-card {
     display: flex;
     justify-content: space-between;
   }
-  .episodes-wrapper-card:nth-child(odd) {
+  .episodes-wrapper-card:nth-child(even) {
     box-shadow: none;
   }
   .episodes-wrapper-card:hover {
@@ -716,6 +724,14 @@
   margin-left: -1rem;
 }
 
+@media (min-width: 992px) {
+  .episodes-wrapper-card:nth-child(2) .card-title,
+.episodes-wrapper-card:nth-child(5) .card-title,
+.episodes-wrapper-card:nth-child(6) .card-title {
+    color: #cd4631;
+  }
+}
+
 .episodes-swirl-top {
   height: 8rem;
   width: auto;
@@ -769,8 +785,15 @@
 .become-wrapper {
   position: relative;
 }
+@media (min-width: 992px) {
+  .become-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    margin-top: 2rem;
+  }
+}
 .become-wrapper-card {
-  max-width: 40rem;
+  width: 90%;
   margin: 5%;
 }
 .become-wrapper-card-top {
@@ -794,6 +817,8 @@
 }
 .become-wrapper-card-top .become-price-block .btn-become {
   width: 11rem;
+  height: 3rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 .become-wrapper-card-bottom {
@@ -829,10 +854,12 @@
   color: #fff;
   background-color: #cd4631;
   padding: 0.4rem;
+  margin-left: 1rem;
   border-radius: 0.4rem;
+  text-align: center;
 }
 
-.member-top {
+.member-top, .member-bottom {
   background-color: #fff;
 }
 
@@ -841,8 +868,12 @@
   border: 0.15rem solid #cd4631;
 }
 
-.official-bottom {
+.official-bottom, .official-top {
   background-color: #fff;
+}
+
+.member-bottom, .family-bottom, .official-bottom {
+  height: 18rem;
 }
 
 .section-five-star {
