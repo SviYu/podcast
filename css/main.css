@@ -98,7 +98,7 @@
   color: #cd4631;
 }
 
-.btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-section-three {
+.btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
   width: 15rem;
   height: 4rem;
   font-size: 1.4rem;
@@ -116,13 +116,13 @@
   margin: 3rem 0;
 }
 @media (min-width: 1200px) {
-  .btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-section-three {
+  .btn-header, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
     width: 20rem;
     height: 5rem;
     font-size: 1.6rem;
   }
 }
-.btn-header:hover, .become-wrapper-card-top .become-price-block .btn-become:hover, .btn-episodes:hover, .btn-section-three:hover {
+.btn-header:hover, .become-wrapper-card-top .become-price-block .btn-become:hover, .btn-episodes:hover, .btn-articles:hover, .btn-section-three:hover {
   background-color: #cd4631;
   border-color: #cd4631;
   color: #fff;
@@ -749,7 +749,7 @@
   }
 }
 
-.btn-episodes {
+.btn-episodes, .btn-articles {
   padding: 0 2rem;
   width: fit-content;
   margin: 6rem auto 3rem;
@@ -950,6 +950,7 @@
   font-size: 2.25rem;
   font-weight: bold;
   margin: 1rem 0 1.5rem;
+  transition: all 0.3s;
 }
 .articles-wrapper-card .articles-bottom-box {
   display: flex;
@@ -974,6 +975,14 @@
   right: 3rem;
   z-index: -1;
   transform: rotate(135deg);
+}
+
+.articles-card-hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 body {

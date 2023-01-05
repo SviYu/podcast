@@ -58,6 +58,7 @@
             font-size: size(lg);
             font-weight: bold;
             margin: 1rem 0 1.5rem;
+            transition: all .3s;
         }
         .articles-bottom-box{
             display: flex;
@@ -83,4 +84,13 @@
     right: 3rem;
     z-index: -1;
     transform: rotate(135deg);
+}
+.btn-articles{
+    @extend .btn-episodes;
+}
+.articles-card-hide{
+    display: none;
+}
+.show{
+    display: block;
 }
