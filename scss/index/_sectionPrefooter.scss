@@ -1,0 +1,98 @@
+.section-prefooter {
+    padding: 0 2rem 5rem;
+    width: 100%;
+    position: relative;
+    background-color: #EDF3F7;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include response(lg) {
+        padding: 0 5rem 10rem;
+    }
+
+    &-title {
+        @extend .section-one-title;
+        padding-top: 0;
+    }
+
+    &-undertitle {
+        @extend .header-undertitle;
+        text-align: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .prefooter-photo{
+        max-width: 380px;
+    }
+    .photo-left{
+        position: absolute;
+        top: 30%;
+        left: -30rem;
+        @include response(sm) {
+            left: -25rem;
+        }
+        @include response(lg) {
+            left: -20rem;
+        }
+        @include response(xl) {
+            left: -10rem;
+        }
+    }
+    .photo-right{
+        position: absolute;
+        top: 22%;
+        right: -32rem;
+        @include response(sm) {
+            right: -25rem;
+        }
+        @include response(lg) {
+            right: -20rem;
+        }
+        @include response(xl) {
+            right: -10rem;
+        }
+    }
+    .beta{
+        color: color(col-red);
+        font-size: size(xs);
+        text-transform: uppercase;
+        border: 1px solid color(col-red);
+        padding: .3rem;
+        border-radius: .2rem;
+        margin: 8rem auto 2rem;
+        width: fit-content;
+    }
+    .btn-block{
+        position: relative;
+        
+        .btn-prefooter{
+            @extend .btn-header;
+            border: none;
+            margin-top: 7rem;
+            width: 17rem;
+        }
+        .prefooter-btn-sparkle{
+            position: absolute;
+            top:8.5rem;
+            right: -3.5rem;
+        }
+        .prefooter-icon-block{
+            display: flex;
+            justify-content: center;
+
+            .prefooter-icon{
+                width: 2rem;
+                height: 2rem;
+                margin: 0 .5rem;
+                transition: all .2s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
