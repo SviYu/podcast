@@ -3,7 +3,7 @@
     background-color: color(col-beige);
     padding: 1rem;
     width: 100%;
-    position: relative
+    position: relative;
 }
 .navbar{
 
@@ -115,6 +115,7 @@
     color: #fff;
     align-self: center;
     margin: 3rem 0;
+    border: none;
     @include response (xl) {
         width: 20rem;
         height: 5rem;
@@ -143,6 +144,9 @@
     left: 0;
     width: 8rem;
     height: auto;
+    @include response(md){
+        width: 15rem;
+    }
 }
 .heroSwirl-right{
     position: absolute;

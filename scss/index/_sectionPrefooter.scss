@@ -33,13 +33,14 @@
         top: 30%;
         left: -30rem;
         @include response(sm) {
-            left: -25rem;
+            top: 25%;
+            left: -22rem;
         }
         @include response(lg) {
-            left: -20rem;
+            left: -10rem;
         }
         @include response(xl) {
-            left: -10rem;
+            left: -5rem;
         }
     }
     .photo-right{

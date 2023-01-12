@@ -1,0 +1,43 @@
+.header-btn-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include response(md){
+        flex-direction: row
+    }
+}
+.btn-header1{
+    @extend .btn-header;
+    width: 20rem;
+    background: transparent;
+    border: .15rem solid color(col-black);
+    color: color(col-black);
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    &:hover{
+        background-color: color(col-black);
+        color: #fff;
+        border: none;
+    }
+        @include response(md){
+            margin: 0 1rem; 
+        }
+}
+.btn-header2{
+    @extend .btn-header;
+    width: 15rem;
+    margin: 1rem 0;
+}
+.heroSwirl-bottom-right{
+    @extend .heroSwirl-bottom;
+    left: 100%;
+    transform: translate(-100%, 0);
+}
+.header-boxes-wrapper{
+    position: absolute;
+    height: 15rem;
+    bottom: -7.5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}

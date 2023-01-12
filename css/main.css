@@ -98,7 +98,7 @@
   color: #cd4631;
 }
 
-.btn-header, .section-prefooter .btn-block .btn-prefooter, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
+.btn-header, .btn-header2, .btn-header1, .section-prefooter .btn-block .btn-prefooter, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
   width: 15rem;
   height: 4rem;
   font-size: 1.4rem;
@@ -114,15 +114,16 @@
   color: #fff;
   align-self: center;
   margin: 3rem 0;
+  border: none;
 }
 @media (min-width: 1200px) {
-  .btn-header, .section-prefooter .btn-block .btn-prefooter, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
+  .btn-header, .btn-header2, .btn-header1, .section-prefooter .btn-block .btn-prefooter, .become-wrapper-card-top .become-price-block .btn-become, .btn-episodes, .btn-articles, .btn-section-three {
     width: 20rem;
     height: 5rem;
     font-size: 1.6rem;
   }
 }
-.btn-header:hover, .section-prefooter .btn-block .btn-prefooter:hover, .become-wrapper-card-top .become-price-block .btn-become:hover, .btn-episodes:hover, .btn-articles:hover, .btn-section-three:hover {
+.btn-header:hover, .btn-header2:hover, .btn-header1:hover, .section-prefooter .btn-block .btn-prefooter:hover, .become-wrapper-card-top .become-price-block .btn-become:hover, .btn-episodes:hover, .btn-articles:hover, .btn-section-three:hover {
   background-color: #cd4631;
   border-color: #cd4631;
   color: #fff;
@@ -148,6 +149,11 @@
   width: 8rem;
   height: auto;
 }
+@media (min-width: 768px) {
+  .heroSwirl-left {
+    width: 15rem;
+  }
+}
 
 .heroSwirl-right {
   position: absolute;
@@ -157,7 +163,7 @@
   height: auto;
 }
 
-.heroSwirl-bottom {
+.heroSwirl-bottom, .heroSwirl-bottom-right {
   position: absolute;
   height: 8rem;
   bottom: -4rem;
@@ -453,6 +459,7 @@
   background-color: white;
   padding: 2rem;
   margin: 2rem auto;
+  height: auto;
 }
 .feedback-wrapper .feedback-box .quote-sign {
   margin-left: 10%;
@@ -1014,17 +1021,18 @@
 }
 @media (min-width: 576px) {
   .section-prefooter .photo-left {
-    left: -25rem;
+    top: 25%;
+    left: -22rem;
   }
 }
 @media (min-width: 992px) {
   .section-prefooter .photo-left {
-    left: -20rem;
+    left: -10rem;
   }
 }
 @media (min-width: 1200px) {
   .section-prefooter .photo-left {
-    left: -10rem;
+    left: -5rem;
   }
 }
 .section-prefooter .photo-right {
@@ -1297,6 +1305,54 @@
 .footer-bottom-right a:hover {
   text-decoration: underline;
   color: #cd4631;
+}
+
+.header-btn-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header-btn-block {
+    flex-direction: row;
+  }
+}
+
+.btn-header1 {
+  width: 20rem;
+  background: transparent;
+  border: 0.15rem solid #000;
+  color: #000;
+  font-weight: 600;
+  margin: 2rem 0 1rem 0;
+}
+.btn-header1:hover {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+@media (min-width: 768px) {
+  .btn-header1 {
+    margin: 0 1rem;
+  }
+}
+
+.btn-header2 {
+  width: 15rem;
+  margin: 1rem 0;
+}
+
+.heroSwirl-bottom-right {
+  left: 100%;
+  transform: translate(-100%, 0);
+}
+
+.header-boxes-wrapper {
+  position: absolute;
+  height: 15rem;
+  bottom: -7.5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 body {
