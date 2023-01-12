@@ -167,43 +167,43 @@
 
 /* Cards wrapper */
 .cards-wrapper {
-  display: flex;
-  overflow: scroll;
-  margin: 2rem auto 6rem;
+  /* display: flex; */
+  /* overflow: scroll; */
+  margin: 2rem 0 6rem;
   user-select: none;
 }
 .cards-wrapper .header-card {
   position: relative;
-  width: 15rem;
-  height: 15rem;
-  margin-right: 1rem;
+  width: auto;
+  height: auto;
 }
 @media (min-width: 992px) {
   .cards-wrapper .header-card {
-    width: 23rem;
-    height: 23rem;
+    /* width: 23rem;
+    height: 23rem; */
   }
 }
 @media (min-width: 1200px) {
   .cards-wrapper .header-card {
-    width: 32rem;
-    height: 32rem;
+    /* width: 32rem;
+    height: 32rem; */
   }
 }
 .cards-wrapper .header-card-img {
-  width: 15rem;
-  height: 15rem;
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
 }
 @media (min-width: 992px) {
   .cards-wrapper .header-card-img {
-    width: 23rem;
-    height: 23rem;
+    /* width: 23rem;
+    height: 23rem; */
   }
 }
 @media (min-width: 1200px) {
   .cards-wrapper .header-card-img {
-    width: 32rem;
-    height: 32rem;
+    /* width: 32rem;
+    height: 32rem; */
   }
 }
 .cards-wrapper .header-card-platform {
@@ -464,7 +464,7 @@
 }
 @media (min-width: 992px) {
   .feedback-wrapper .feedback-box .feedback-text, .feedback-wrapper .feedback-box .feedback-author {
-    font-size: 2.25rem;
+    font-size: 1.4rem;
   }
 }
 .feedback-wrapper .feedback-box .feedback-author {
@@ -497,29 +497,15 @@
   border-color: #cd4631;
 }
 
-.swiper-slide {
-  height: fit-content;
+.swiper-pagination-bullet-active {
+  background-color: #cd4631;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  width: 2rem;
-  height: 2rem;
-  border: 0.1rem solid #000;
-  padding: 1.5rem;
-  border-radius: 50%;
-  transition: all 0.2s;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  border-color: #cd4631;
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  color: #000;
-  font-size: 1.6rem;
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
 }
 
 .section-three {

@@ -160,35 +160,35 @@
 }
 /* Cards wrapper */
 .cards-wrapper{
-    display: flex;
-    overflow: scroll;
-    margin: 2rem auto 6rem;
+    /* display: flex; */
+    /* overflow: scroll; */
+    margin: 2rem 0 6rem;
     user-select: none;
     .header-card{
         position: relative;
-        width: 15rem;
-        height:15rem;
-        margin-right: 1rem;
+        width: auto;
+        height: auto;
 
         @include response(lg){
-            width: 23rem;
-            height: 23rem;
+            /* width: 23rem;
+            height: 23rem; */
         }
         @include response(xl){
-            width: 32rem;
-            height: 32rem;
+            /* width: 32rem;
+            height: 32rem; */
         }
         
         &-img{
-            width: 15rem;
-            height:15rem;
+            width: 100%;
+            height:auto;
+            border-radius: 1.5rem;
             @include response(lg) {
-                width: 23rem;
-                height: 23rem;
+                /* width: 23rem;
+                height: 23rem; */
             }
             @include response(xl) {
-                width: 32rem;
-                height: 32rem;
+                /* width: 32rem;
+                height: 32rem; */
             }
 
         }
@@ -229,6 +229,7 @@
         }
     }
 }
+
 /* supported */
 .supported{
     max-width: 100rem;
@@ -250,5 +251,4 @@
         @include response(lg) {
             display: flex;
         }
-
 }

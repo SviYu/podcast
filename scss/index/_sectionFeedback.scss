@@ -56,7 +56,7 @@
             margin: 1rem auto 2rem;
             font-size: size(sm);
             @include response(lg) {
-                font-size: size(lg);
+                font-size: size(sm);
             }
         }
         .feedback-author{
@@ -97,25 +97,12 @@
     @extend .quote-swirl-bottom
 }
 
-.swiper-slide{
-    height: fit-content;
+.swiper-pagination-bullet-active{
+    background-color: color(col-red);
 }
-
-.swiper-button-prev, 
-.swiper-button-next{
-    width: 2rem;
-    height: 2rem;
-    border: .1rem solid color(col-black);
-    padding: 1.5rem;
-    border-radius: 50%;
-    transition: all .2s;
-}
-.swiper-button-prev:hover, 
-.swiper-button-next:hover{
-   border-color: color(col-red);
-}
-.swiper-button-prev:after, 
-.swiper-button-next:after{
-    color: color(col-black);
-    font-size: size(md);
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction{
+    bottom: 0px;
 }
