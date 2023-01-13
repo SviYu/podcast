@@ -1,0 +1,68 @@
+.section-about-one {
+    padding: 0 2rem 5rem;
+    width: 100%;
+
+    @include response(lg) {
+        padding: 0 5rem 5rem;
+    }
+    &-header{
+        margin: 0 0 2rem;
+        @include response(md){
+            margin: 4rem 0 2rem
+        }
+        @include response(xl){
+            margin: 8rem 0 2rem
+        }
+        &-title {
+            @extend .section-one-title;
+        }
+        &-undertitle {
+            @extend .header-undertitle;
+        }
+    }
+    &-img{
+        border-radius: .5rem;
+        width: 100%;
+        height: auto;
+    }
+}
+.experiences-block{
+    margin: 3rem 0 5rem;
+    .subtitle-block{
+        width: fit-content;
+        margin: 4rem auto 3rem;
+        position: relative;
+        h2{
+            font-weight: bold;
+            font-size: size(md);
+                @include response (lg) {
+                    font-size: size(lg);
+                }
+        }   
+        .red-sparkle{
+            position: absolute;
+            top: -3.5rem;
+            left: -4rem;
+            transform: rotate(-90deg);
+        }
+    }
+    &-text{
+        @include response(md) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &-text div{
+        @include response(md) {
+            width: 45%;
+        }
+    }
+    &-text div a{
+        color: color(col-red);
+        transition: all .2s;
+        &:hover{
+            color: color(col-black);
+            font-weight: 600;
+        }
+    }
+}

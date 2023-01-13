@@ -1,3 +1,11 @@
+.headerAbout{
+    @extend .header;
+    position: relative;
+    min-height: 40rem;
+    @include response(xl){
+        height: 50rem;
+    }
+}
 .header-btn-block{
     display: flex;
     flex-direction: column;
@@ -33,11 +41,63 @@
     @extend .heroSwirl-bottom;
     left: 100%;
     transform: translate(-100%, 0);
+    z-index: 1;
 }
 .header-boxes-wrapper{
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    margin-top: 2rem;
+        @include response(md) {
+            flex-direction: row;
+            position: absolute;
+            height: fit-content;
+            bottom: -7.4rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        @include response(xl) {
+            bottom: -10rem;
+        
+        }
+}
+.header-box{
+    background-color: #fff;
+    width: 25rem;
     height: 15rem;
-    bottom: -7.5rem;
-    left: 50%;
-    transform: translate(-50%, 0);
+    border: .1rem solid color(col-black);
+    border-radius: .3rem;
+    margin-bottom: 2rem;
+    transition: all .2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        @include response(md) {
+            width: 22rem;
+            margin: 3rem 1rem 0;
+        }
+        @include response(xl) {
+            width: 30rem;
+            height: 20rem;
+        }
+    
+    &:hover{
+        box-shadow: .5rem .5rem 0rem color(col-red);
+        transform: translateY(-.2rem);
+    }
+    &-number{
+        font-size: size(xxl);
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        span{
+            color: color(col-red);
+        }
+    }
+    &-text{
+        font-size: xs;
+    }
 }
